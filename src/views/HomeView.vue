@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="banner img-wrapper conatiner-fluid">
+    <div class="banner img-wrapper container-fluid p-0 position-relative">
       <div class="overlay z-3 position-absolute p-5">
         <h1>HEADPHONES</h1>
       </div>
@@ -22,7 +22,13 @@
       </p>
     </div>
 
-    <div class="feat container-fluid bg-warning">feats components</div>
+    <div
+      class="feat container-fluid bg-warning d-flex justify-content-center align-items-center flex-wrap"
+    >
+      <feature-box />
+      <feature-box />
+      <feature-box />
+    </div>
 
     <div class="footer bg-danger text-center container-sm">
       <p>footer</p>
@@ -32,7 +38,9 @@
 </template>
 
 <script>
+import FeatureBox from "@/components/FeatureBox.vue";
 export default {
+  components: { FeatureBox },
   name: "HomeView",
 };
 </script>
@@ -89,7 +97,8 @@ img {
   }
 }
 .feat {
-  height: 200px;
+  // height: 200px;
+  padding: 40px 20px;
   margin: 20px 0;
 }
 </style>
