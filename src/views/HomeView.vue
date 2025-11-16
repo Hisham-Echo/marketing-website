@@ -23,7 +23,7 @@
     </div>
 
     <div
-      class="feat container-fluid bg-warning d-flex justify-content-center align-items-center flex-wrap"
+      class="feat container-fluid d-flex justify-content-center align-items-center flex-wrap"
     >
       <feature-box />
       <feature-box />
