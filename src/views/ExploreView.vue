@@ -1,5 +1,5 @@
 <template>
-    <div>explore</div>
+  <div>explore</div>
 </template>
 
 <script>
