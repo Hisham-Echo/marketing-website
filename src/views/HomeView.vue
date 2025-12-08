@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <!-- landing banner and title -->
     <div class="banner img-wrapper container-fluid p-0 position-relative">
       <div class="overlay z-3 position-absolute p-5">
         <h1>HEADPHONES</h1>
@@ -9,8 +10,10 @@
         alt="banner"
       />
     </div>
-
-    <div class="desc container-sm">
+    <!-- descripotion section -->
+    <div
+      class="desc container-sm d-flex flex-column justify-content-center align-items-center"
+    >
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsam
       </p>
@@ -21,24 +24,24 @@
         Quisquam ipsam illum, eaque debitis aperiam iure laborum mollitia porro.
       </p>
     </div>
-
+    <!-- feature section -->
     <div
       class="feat container-fluid d-flex justify-content-center align-items-center flex-wrap"
     >
       <feature-box />
-      <feature-box />
-      <feature-box />
     </div>
-
-    <div class="footer bg-danger text-center container-sm">
-      <p>footer</p>
+    <!-- footer section -->
+    <footer class="text-center container-sm">
+      <p>
+        mollitia eos id ipsum Minima nulla impedit rerum derum dignissimos hic!
+      </p>
       <button>Contact Us</button>
-    </div>
+    </footer>
   </div>
 </template>
 
 <script>
-import FeatureBox from "@/components/FeatureBox.vue";
+import FeatureBox from "@/components/FeatureSection.vue";
 export default {
   components: { FeatureBox },
   name: "HomeView",
@@ -48,7 +51,7 @@ export default {
 <style lang="scss">
 .img-wrapper {
   width: 100%;
-  height: 40vh;
+  height: 60vh;
   overflow: hidden;
   position: relative;
 }
@@ -74,7 +77,7 @@ export default {
 
 img {
   width: 100%;
-  height: 40vh;
+  height: 60vh;
   object-fit: cover;
 }
 
@@ -91,14 +94,45 @@ img {
   font-size: 1.2rem;
   background: #ff008015;
   border: 2px solid #ff008005;
-  border-radius: 5px;
+  text-align: center;
+  width: 60%;
+  @media (max-width: 787px) {
+    width: 100%;
+  }
+  max-width: 700px;
   &:hover {
     background: #ff008020;
   }
 }
 .feat {
-  // height: 200px;
   padding: 40px 20px;
   margin: 20px 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  p {
+    font-size: 1.2rem;
+    background-color: #ff008015;
+    padding: 5px 20px;
+    width: 70%;
+    @media (max-width: 787px) {
+      width: 100%;
+    }
+  }
+  button {
+    color: white;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 5px 40px;
+    background-color: #0d6efd;
+    &:hover {
+      background-color: #0d6efdcc;
+    }
+  }
 }
 </style>
